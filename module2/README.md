@@ -10,7 +10,7 @@ This instuction is to build the Spring Pet Clinic application to an ear file, in
 Visit the [Traditional Deployment document](https://docs.spring.io/spring-boot/how-to/deployment/traditional-deployment.html) for the detail of how Spring Boot supports traditional deployment.
 
 Run the following:
-- `git clone https://github.com/spring-projects/spring-petclinic.git`
+- `git clone https://github.com/Emily-Jiang/tx-more-lab.git`
 - `cd tx-more-lab/module2/build-war`
 - `git clone https://github.com/spring-projects/spring-petclinic.git`
 - update the `pom.xml` file by adding `packaging` element and the `exec.mainClass` property as the following
