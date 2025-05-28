@@ -13,7 +13,9 @@ Run the following:
 - `git clone https://github.com/Emily-Jiang/tx-more-lab.git`
 - `cd tx-more-lab/module2/build-war`
 - `git clone https://github.com/spring-projects/spring-petclinic.git`
-- update the `pom.xml` file by adding `packaging` element and the `exec.mainClass` property as the following
+- update the `pom.xml` file by adding
+  - the [`packaging`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L15) element after the `<version>3.4.0-SNAPSHOT</version>` line
+  - and the [`exec.mainClass`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L41) property before the `</properties>` line as the following:
   - (or run the `cp updated/pom.xml spring-petclinic/pom.xml` command):
 
 ```
@@ -27,7 +29,10 @@ Run the following:
     </properties>
 ```
 
-- update the `PetClinicApplication.java` file by extending the `PetClinicApplication` class with `SpringBootServletInitializer` and adding the `configure()` method as the following
+- update the `PetClinicApplication.java` file by
+  - adding 2 [`import`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L21-L22) statements 
+  - extending the `PetClinicApplication` class with [`SpringBootServletInitializer`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L33)
+  - and adding the [`configure()`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L35-L38) statements  method as the following
   - (or run the `cp updated/PetClinicApplication.java spring-petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java` command):
  
 ```
