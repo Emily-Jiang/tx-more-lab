@@ -30,7 +30,7 @@
                 <artifactId>maven-ear-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
-                     <version>10</version>
+                    <version>10</version>
                     <modules>
                         <webModule>
                             <groupId>org.springframework.samples</groupId>
