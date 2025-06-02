@@ -91,8 +91,8 @@ Assume the spring-petclinic ear file is built at the previous step.
 - Click Next button 
 - Select the **Fast Path** option, and click **Next** button 
 - At the Step 1, click **Next** button 
-- At the Step 2, make sure the `demoServer1` is selected. If not, select the `demoServer1` and check the Module, and click **Apply** button. Then, click **Next** button 
-- Click **Next** buttons until the **Summary** step
+- At the Step 2, make sure the `demoServer1` is selected. If not, select the `demoServer1` and check the Module, and click **Apply** button. Then, click **Next** button
+- At the Step 4, enter `/spring-petclinic` as the the context root. Then, click **Next** button.
 - At the **Summary** step, click **Finish** button 
 - Save and syncronize the changes
 
