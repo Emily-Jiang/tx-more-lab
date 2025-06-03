@@ -58,7 +58,7 @@ public class PetClinicApplication extends SpringBootServletInitializer {
 5. build the project
 ```
 cd spring-petclinic
-mvn package
+mvn clean install
 ```
 
 The `spring-petclinic-3.4.0-SNAPSHOT.war` file is created under the `target` directory.
