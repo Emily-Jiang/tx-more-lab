@@ -7,35 +7,40 @@ This instuction is to build the Spring Pet Clinic application to an ear file, in
 
 ## Build the spring-petclinic war file
 
-Visit the [Traditional Deployment document](https://docs.spring.io/spring-boot/how-to/deployment/traditional-deployment.html) for the detail of how Spring Boot supports traditional deployment.
+1. Visit the [Traditional Deployment document](https://docs.spring.io/spring-boot/how-to/deployment/traditional-deployment.html) for the detail of how Spring Boot supports traditional deployment.
 
-Run the following:
-- `git clone https://github.com/Emily-Jiang/tx-more-lab.git`
-- `cd tx-more-lab/module2/build-war`
-- `git clone https://github.com/spring-projects/spring-petclinic.git
-- `cd spring-petclinic`
-- update the `pom.xml` file by adding
-  - the [`packaging`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L15) element after the `<version>3.4.0-SNAPSHOT</version>` line
-  - and the [`exec.mainClass`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L41) property before the `</properties>` line as the following:
-  - (or run the `cp updated/pom.xml spring-petclinic/pom.xml` command):
-
+2. Run the following:
 ```
-  ...
+git clone https://github.com/Emily-Jiang/tx-more-lab.git
+cd tx-more-lab/module2/build-war
+git clone https://github.com/spring-projects/spring-petclinic.git
+```
+3. Update the `pom.xml` file by running
+  ```
+cp updated/pom.xml spring-petclinic/pom.xml
+  ```
+  The updated pom.xml has the following changes:
+  - added the [`packaging`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L15) element after the `<version>3.4.0-SNAPSHOT</version>` line
+```
     <version>3.4.0-SNAPSHOT</version>
     <packaging>war</packaging>
-  ...
+```
+- added the [`exec.mainClass`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L41) property before the `</properties>` line as the following
+```
     <properties>
        ...
        <exec.mainClass>org.springframework.samples.petclinic.PetClinicApplication</exec.mainClass>
     </properties>
 ```
 
-- update the `PetClinicApplication.java` file by
-  - adding 2 [`import`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L21-L22) statements 
-  - extending the `PetClinicApplication` class with [`SpringBootServletInitializer`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L33)
-  - and adding the [`configure()`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L35-L38) statements  method as the following
-  - (or run the `cp updated/PetClinicApplication.java spring-petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java` command):
- 
+4. Update the `PetClinicApplication.java` file by running
+   ```
+   cp updated/PetClinicApplication.java spring-petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
+   ```
+   The updated `PetclinicApplication.java` has the following changes:
+  - added 2 [`import`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L21-L22) statements 
+  - extended the `PetClinicApplication` class with [`SpringBootServletInitializer`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L33)
+  - added the [`configure()`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L35-L38) statements  method as the following 
 ```
 ...
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -50,8 +55,11 @@ public class PetClinicApplication extends SpringBootServletInitializer {
 
 ...
 ```
-- `cd spring-petclinic`
-- `mvn clean install`
+5. build the project
+```
+cd spring-petclinic
+mvn package
+```
 
 The `spring-petclinic-3.4.0-SNAPSHOT.war` file is created under the `target` directory.
 
