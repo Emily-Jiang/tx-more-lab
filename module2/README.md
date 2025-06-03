@@ -12,7 +12,8 @@ Visit the [Traditional Deployment document](https://docs.spring.io/spring-boot/h
 Run the following:
 - `git clone https://github.com/Emily-Jiang/tx-more-lab.git`
 - `cd tx-more-lab/module2/build-war`
-- `git clone https://github.com/spring-projects/spring-petclinic.git`
+- `git clone https://github.com/spring-projects/spring-petclinic.git
+- `cd spring-petclinic`
 - update the `pom.xml` file by adding
   - the [`packaging`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L15) element after the `<version>3.4.0-SNAPSHOT</version>` line
   - and the [`exec.mainClass`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L41) property before the `</properties>` line as the following:
