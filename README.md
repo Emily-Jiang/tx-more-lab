@@ -17,3 +17,9 @@ In this hands on lab, you will experience some of the new capabiltiies provided 
 1. Clone this repository on the System with the command git clone
 2. Copy the createMLSCluster.py script to the Deployment Manager bin directory under /opt/WAS/profiles/dmgr/bin
 3. Run the command ```./wsadmin.sh -lang jython -f createMLSCluster.py -user admin -password IBMDem0S```
+
+# Start IHS Web Server After Creating Managed Liberty Server Cluster Using the Administrative Console
+1. Login to the Administrative Console by pointing your browser to http://[hostname]:9060/admin
+2. Click on Server Types and Web servers
+3. Select the "webserver1" checkbox and then click on "Start"
+4. Refresh the page to see the "Status" turn to a green arrow
