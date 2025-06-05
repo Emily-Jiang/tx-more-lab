@@ -5,9 +5,9 @@ In this hands on lab, you will experience some of the new capabiltiies provided 
 1. Login to the Administrative Console by pointing your browser to http://[hostname]:9060/admin
 2. Click on "Clusters" and then "WebSphere application server clusters"
 3. Click on New and in the "Cluster name" field input "MLSCluster"
-4. In the "Member Name" field, enter "libertyserver_node1", ensure "node1" is selected under "Select node", and in the "Select basis for first cluster member" section, select "default-managed-liberty-server" from the pull down under the "Create the member using an application server template"
+4. In the "Member Name" field, enter "libertyServer_node1", ensure "node1" is selected under "Select node", and in the "Select basis for first cluster member" section, select "default-managed-liberty-server" from the pull down under the "Create the member using an application server template"
 5. Click "Next"
-6. In the "Create additional cluster members" page, under "Member name" enter "libertyserver_node2", ensure "node2" is selected under "Select node" pull down
+6. In the "Create additional cluster members" page, under "Member name" enter "libertyServer_node2", ensure "node2" is selected under "Select node" pull down
 7. Click "Add Member". There should now be two members of the cluster, one on each node. Click "Next"
 8. The cluster creation summary is now displayed. Click "Finish" to complete cluster creation
 9. Click on "Save" to save the configuration
