@@ -1,5 +1,7 @@
 # Summary
-In this hands on lab, you will experience some of the new capabiltiies provided by WebSphere Application Server and MoRE (Modernization Runtime Extensions). One of the key capabilities delivered is the ability to create and manage static clusters of Managed Liberty Application Servers. Each module walks through an installation of JavaEE and Jakarta applications that can be managed in the WebSphere Application Server Administrative Console
+In this interactive, hands-on lab, you'll explore the cutting-edge capabilities of WebSphere Application Server and MoRE (Modernization Runtime Extensions)—tools designed to supercharge your modernization journey. One of the standout features you'll experience is the powerful new ability to create and manage static clusters of Managed Liberty Application Servers, bringing scalability and control to a whole new level.
+
+Each interactive module will guide you through deploying JavaEE and Jakarta applications, all seamlessly managed through the intuitive WebSphere Application Server Administrative Console. Whether you're modernizing legacy systems or building cloud-native apps, this lab is your launchpad into the next generation of enterprise application management.
 
 # Create Static Managed Liberty Server Cluster Using the Administrative Cluster
 1. Login to the Administrative Console by pointing your browser to http://[hostname]:9060/admin
