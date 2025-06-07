@@ -13,7 +13,7 @@ AdminApp.install(
     "-noallowDispatchRemoteInclude -noallowServiceRemoteInclude -novalidateSchema -contextroot /resorts "
     "-MapModulesToServers [[ modresorts-2.0.0.war modresorts-2.0.0.war,WEB-INF/web.xml "
     "WebSphere:cell=MoREDemoCell,cluster=MLSCluster],[WebSphere:cell=MoREDemoCell,node=node2,server=webserver1 ]] ]"
-)\
+)
 AdminConfig.save()
 
 # Generate and Propogate Plugin
