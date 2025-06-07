@@ -17,16 +17,17 @@ AdminApp.install(
 AdminConfig.save()
 
 # Generate and Propogate Plugin
-print("***Generating Plugin***")
+CONFIGPATH = USERHOME + "/IBM/WebSphere/AppServer/profiles/Dmgr01/config"
+
 AdminControl.invoke(
     'WebSphere:name=PluginCfgGenerator,process=dmgr,platform=common,node=CellManager,version=9.0.5.24,type=PluginCfgGenerator,mbeanIdentifier=PluginCfgGenerator,cell=MoREDemoCell,spec=1.0',
     'generate',
-    [f"{USERHOME}/IBM/WebSphere/AppServer/profiles/Dmgr01/config", "MoREDemoCell", "node2", "webserver1", "false"]
+    [CONFIGPATH, "MoREDemoCell", "node2", "webserver1", "false"]
 )
 
 print("***Propogating Plugin***")
 AdminControl.invoke(
     'WebSphere:name=PluginCfgGenerator,process=dmgr,platform=common,node=CellManager,version=9.0.5.24,type=PluginCfgGenerator,mbeanIdentifier=PluginCfgGenerator,cell=MoREDemoCell,spec=1.0',
     'propagate',
-    [f"{USERHOME}/IBM/WebSphere/AppServer/profiles/Dmgr01/config", "MoREDemoCell", "node2", "webserver1"]
+    [CONFIGPATH, "MoREDemoCell", "node2", "webserver1"]
 )
