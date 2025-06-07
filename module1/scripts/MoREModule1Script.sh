@@ -3,12 +3,12 @@
 # Variables Section
 # Location of files for Demo
 USERHOME = "/home/techzone"
-DEMOPATH = USERHOME + "/Student" + "/tx-more-lab" + "/module1"
+DEMOPATH = "/home/techzone/Student/tx-more-lab/module1"
 
 # Install Application ModResorts
 print("***Now installing Application Mod Resorts***")
 AdminApp.install(
-    DEMOPATH + 'modresorts/target/modresorts-2.0.0.war',
+    DEMOPATH + '/modresorts/target/modresorts-2.0.0.war',
     f'''[
         -distributeApp 
         -useMetaDataFromBinary 
