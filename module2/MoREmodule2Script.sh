@@ -3,7 +3,7 @@
 # Variables Section
 #Location of files for Demo
 USERHOME = "/home/techzone"
-DEMOPATH = USERHOME + "/Demo"
+DEMOPATH = USERHOME + "/Student"
 
 # Install Application PetClinic
 print("***Now installing Application PetClinic***")
