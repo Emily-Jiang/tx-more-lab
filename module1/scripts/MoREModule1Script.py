@@ -11,8 +11,8 @@ AdminApp.install(
     DEMOPATH + "/modresorts/target/modresorts-2.0.0.war",
     "[ -distributeApp -useMetaDataFromBinary -appname modresorts-2_0_0_war -validateinstall warn "
     "-noallowDispatchRemoteInclude -noallowServiceRemoteInclude -novalidateSchema -contextroot /resorts "
-    "-MapModulesToServers [[ modresorts-2.0.0.war modresorts-2.0.0.war,WEB-INF/web.xml "
-    "WebSphere:cell=MoREDemoCell,cluster=MLSCluster WebSphere:cell=MoREDemoCell,node=node2,server=webserver1 ]] ]"
+    "-MapModulesToServers [[ modresorts-2.0.0.war modresorts-2.0.0.war,WEB-INF/web.xml WebSphere:cell=MoREDemoCell,cluster=MLSCluster ] "
+    "[ modresorts-2.0.0.war modresorts-2.0.0.war,WEB-INF/web.xml WebSphere:cell=MoREDemoCell,node=node2,server=webserver1 ]] ]"
 )
 AdminConfig.save()
 
