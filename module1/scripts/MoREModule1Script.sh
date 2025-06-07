@@ -8,7 +8,7 @@ DEMOPATH = "/home/techzone/Student/tx-more-lab/module1"
 # Install Application ModResorts
 print("***Now installing Application Mod Resorts***")
 AdminApp.install(
-    DEMOPATH + "/modresorts/target/modresorts-2.0.0.war",
+    "/home/techzone/Student/tx-more-lab/module1/modresorts/target/modresorts-2.0.0.war",
     "[ -distributeApp -useMetaDataFromBinary -appname modresorts-2_0_0_war -validateinstall warn "
     "-noallowDispatchRemoteInclude -noallowServiceRemoteInclude -novalidateSchema -contextroot /resorts "
     "-MapModulesToServers [[ modresorts-2.0.0.war modresorts-2.0.0.war,WEB-INF/web.xml "
