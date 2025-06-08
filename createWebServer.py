@@ -7,20 +7,20 @@ AdminTask.createWebServer('node2', [
     '-templateName', 'IHS',
     '-serverConfig', [
         '-webPort', '7777',
-        '-serviceName',
+        '-serviceName', '',
         '-webInstallRoot', USERHOME + '/IBM/HTTPServer',
         '-webProtocol', 'HTTP',
-        '-configurationFile',
-        '-errorLogfile',
-        '-accessLogfile',
+        '-configurationFile', '',
+        '-errorLogfile', '',
+        '-accessLogfile', '',
         '-pluginInstallRoot', USERHOME + '/IBM/HTTPServer/plugin',
         '-webAppMapping', 'ALL'
     ],
     '-remoteServerConfig', [
         '-adminPort', '8008',
-        '-adminUserID',
-        '-adminPasswd', '********',
-        'HTTP'
+        '-adminUserID', '',
+        '-adminPasswd', '',
+        '-protocol', 'HTTP'
     ]
 ])
 AdminConfig.save()
