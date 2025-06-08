@@ -2,27 +2,27 @@ USERHOME = "/home/techzone"
 
 # Create Web Server on a Managed Node
 print "***Creating Web Server webserver1 on node2***"
-AdminTask.createWebServer('node2', f'''[
-    -name webserver1 
-    -templateName IHS 
-    -serverConfig [
-        -webPort 7777 
-        -serviceName 
-        -webInstallRoot {USERHOME}/IBM/HTTPServer 
-        -webProtocol HTTP 
-        -configurationFile 
-        -errorLogfile 
-        -accessLogfile 
-        -pluginInstallRoot {USERHOME}/IBM/HTTPServer/plugin 
-        -webAppMapping ALL
-    ] 
-    -remoteServerConfig [
-        -adminPort 8008 
-        -adminUserID 
-        -adminPasswd ******** 
-        HTTP
+AdminTask.createWebServer('node2', [
+    '-name', 'webserver1',
+    '-templateName', 'IHS',
+    '-serverConfig', [
+        '-webPort', '7777',
+        '-serviceName',
+        '-webInstallRoot', USERHOME + '/IBM/HTTPServer',
+        '-webProtocol', 'HTTP',
+        '-configurationFile',
+        '-errorLogfile',
+        '-accessLogfile',
+        '-pluginInstallRoot', USERHOME + '/IBM/HTTPServer/plugin',
+        '-webAppMapping', 'ALL'
+    ],
+    '-remoteServerConfig', [
+        '-adminPort', '8008',
+        '-adminUserID',
+        '-adminPasswd', '********',
+        'HTTP'
     ]
-]''')
+])
 AdminConfig.save()
 
 print "***Creating the host alias***"
