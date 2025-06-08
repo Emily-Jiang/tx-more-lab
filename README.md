@@ -3,6 +3,12 @@ In this interactive, hands-on lab, you'll explore the cutting-edge capabilities 
 
 Each interactive module will guide you through deploying JavaEE and Jakarta applications, all seamlessly managed through the intuitive WebSphere Application Server Administrative Console. Whether you're modernizing legacy systems or building cloud-native apps, this lab is your launchpad into the next generation of enterprise application management.
 
+```
+cd /home/techzone/Student
+git clone https://github.com/Emily-Jiang/tx-more-lab.git
+cd tx-more-lab
+```
+
 # Create Static Managed Liberty Server Cluster Using the Administrative Cluster
 1. Login to the Administrative Console by pointing your browser to http://[hostname]:9060/admin
 2. Click on "Clusters" and then "WebSphere application server clusters"

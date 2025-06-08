@@ -1,3 +1,12 @@
-<h2> Deploy the modresort app via admin console</h2>
 
-<h2>  Deploy the modresort app via admin script</h2>
+```
+cd module1
+
+cd modresorts
+mvn clean package
+```
+
+## Deploy the modresort app via admin console
+
+## Deploy the modresort app via admin script
+
