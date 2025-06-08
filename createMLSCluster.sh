@@ -16,8 +16,6 @@ print("***Successfully synced the nodes***")
 
 # Start the MLS Cluster
 print("***Now starting the cluster MLSCluster***")
-AdminControl.invoke(
-    'WebSphere:name=MLSCluster,process=dmgr,platform=common,node=dmgr,version=9.0.5.24,type=Cluster,mbeanIdentifier=MLSCluster,cell=MoREDemoCell,spec=1.0',
-    'start'
-)
+cluster = AdminControl.queryNames('WebSphere:*,type=Cluster,name=MLSCluster')
+AdminControl.invoke(cluster, 'start')
 print("!!!Successfully started the cluster!!!")
