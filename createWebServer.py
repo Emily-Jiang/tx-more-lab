@@ -23,7 +23,6 @@ AdminTask.createWebServer('node2', [
         'HTTP'
     ]
 ])
-AdminConfig.save()
 
 print "***Creating the host alias***"
 AdminConfig.create(
@@ -31,6 +30,7 @@ AdminConfig.create(
     AdminConfig.getid('/Cell:MoREDemoCell/VirtualHost:default_host/'),
     '[[hostname "*"] [port "7777"]]'
 )
+AdminConfig.save()
 
 # Start Web Server
 print "***Starting Web Server***"
