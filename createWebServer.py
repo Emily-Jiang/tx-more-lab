@@ -20,9 +20,12 @@ AdminTask.createWebServer('node2', [
         '-adminPort', '8008',
         '-adminUserID', '',
         '-adminPasswd', '',
-        '-protocol', 'HTTP'
+        'HTTP'
     ]
 ])
+
+AdminTask.createWebServer('node2', '[-name webserver1 -templateName IHS -serverConfig [-webPort 7777 -serviceName -webInstallRoot /home/itzuser/IBM/IHS -webProtocol HTTP -configurationFile -errorLogfile -accessLogfile -pluginInstallRoot /home/itzuser/IBM/IHS/plugin -webAppMapping ALL] -remoteServerConfig [-adminPort 8008 -adminUserID -adminPasswd ******** HTTP]]')
+
 AdminConfig.save()
 
 print "***Creating the host alias***"
