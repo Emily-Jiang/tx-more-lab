@@ -1,3 +1,5 @@
+import time
+
 USERHOME = "/home/techzone"
 
 # Create Web Server on a Managed Node
@@ -34,6 +36,7 @@ AdminConfig.save()
 
 print "***Syncing the nodes***"
 AdminNodeManagement.syncActiveNodes()
+time.sleep(10)
 
 # Start Web Server
 print "***Starting Web Server***"
