@@ -14,9 +14,9 @@ echo "Stopping all servers..."
 
 echo "Removing all profiles..."
 ./manageprofiles.sh -deleteAll
-rm -rf AppSrv01
-rm -rf AppSrv02
-rm -rf Dmgr01
+rm -rf ../profiles/AppSrv01
+rm -rf ../profiles/AppSrv02
+rm -rf ../profiles/Dmgr01
 
 echo "Stopping IHS..."
 cd /home/techzone/IBM/HTTPServer/bin
