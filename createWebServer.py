@@ -32,6 +32,9 @@ AdminConfig.create(
 )
 AdminConfig.save()
 
+print "***Syncing the nodes***"
+AdminNodeManagement.syncActiveNodes()
+
 # Start Web Server
 print "***Starting Web Server***"
 AdminTask.startMiddlewareServer('[-serverName webserver1 -nodeName node2 ]')
