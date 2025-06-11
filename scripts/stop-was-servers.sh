@@ -1,5 +1,9 @@
 #!/bin/bash
 
+/home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh \
+  -lang jython -user techzone -password IBMDem0s! \
+  -f /home/techzone/Student/tx-more-lab/scripts/deleteMLSCluster.py
+
 echo "Stopping IHS..."
 cd /home/techzone/IBM/HTTPServer/bin
 ./apachectl stop
