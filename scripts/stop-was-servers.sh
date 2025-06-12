@@ -1,5 +1,15 @@
 #!/bin/bash
 
+echo "Uninstalling application modresorts..."
+/home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh \
+  -lang jython -user techzone -password IBMDem0s! \
+  -c "AdminApp.uninstall('modresorts-2_0_0_war'); AdminConfig.save()"
+
+echo "Uninstalling applications spring-petclinic..."
+/home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh \
+  -lang jython -user techzone -password IBMDem0s! \
+  -c "AdminApp.uninstall('spring-petclinic-3_4_0-SNAPSHOT_war'); AdminConfig.save()"
+
 /home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh \
   -lang jython -user techzone -password IBMDem0s! \
   -f /home/techzone/Student/tx-more-lab/scripts/deleteMLSCluster.py
