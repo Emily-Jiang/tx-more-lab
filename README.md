@@ -90,6 +90,8 @@ Run the following command to execute the script:
 ```
 After the script completes, the message `All servers have been started!` is displayed.
 
+---
+
 # Creating a static managed Liberty server cluster
 
 This section guides you through the process of creating a static managed Liberty server cluster.
@@ -157,12 +159,14 @@ Run the following command to create and start the cluster using the provided Jyt
   -f /home/techzone/Student/tx-more-lab/scripts/createMLSCluster.py
 ```
 
-This script:
+The script performs the following actions:
 
 * Creates the static cluster named `MLSCluster`
 * Adds one managed Liberty server on each node
-* Synchronizes the configuration
-* Starts the cluster
+* Synchronizes the configuration across nodes
+* Starts the Liberty cluster
+
+When the cluster starts successfully, the message `!!!Successfully started the cluster!!!` is displayed.
 
 ---
 
