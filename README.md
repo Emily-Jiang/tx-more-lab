@@ -143,7 +143,7 @@ You can use either of the following methods to complete this task:
 
    ![](assets/mlscluster-creation-sync-complete.png)
 
-10. Return to **Servers** → **Clusters** → **WebSphere application server clusters**. Locate `MLSCluster` in the list and ensure it is present. Check the box next to it, then click **Start** to initiate the cluster. Wait until the status displays a green arrow, indicating that it is running.
+10. Return to **Servers** → **Clusters** → **WebSphere application server clusters**. Locate <ins>MLSCluster</ins> in the list and ensure it is present. Check the box next to it, then click **Start** to initiate the cluster. Wait until the status displays a green arrow, indicating that it is running.
 
     ![](assets/mlscluster-start.png)
 
