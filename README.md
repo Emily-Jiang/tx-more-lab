@@ -86,11 +86,8 @@ After the script completes, the message `All servers have been started!` is disp
 # Creating a static managed Liberty server cluster
 
 This section guides you through the process of creating a static managed Liberty server cluster.
-
 You can use either of the following methods to complete this task:
-
 * If you prefer a visual, step-by-step experience, continue with [Using the administrative console](#using-the-administrative-console).
-
 * If you prefer automation or scripting, skip ahead to [Using administrative scripting](#using-administrative-scripting).
 
 ## Using the administrative console
