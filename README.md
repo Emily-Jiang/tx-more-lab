@@ -110,7 +110,7 @@ You can use either of the following methods to complete this task:
 
 2. Navigate to **Servers** &rarr; **Clusters** &rarr; **WebSphere application server clusters**. Click **New...** to create a new cluster.
 
-   ![](assets/assets/mlscluster-creation.png)
+   ![](assets/mlscluster-creation.png)
 
 3. On **Step 1**, set **Cluster name** to `MLSCluster`. Leave the other fields as default. Click **Next**.
 
@@ -133,15 +133,15 @@ You can use either of the following methods to complete this task:
 
 7. Click <u>Review</u>.
 
-   ![](assets/assets/mlscluster-creation-review.png)
+   ![](assets/mlscluster-creation-review.png)
 
 8. Select **Synchronize changes with Nodes**, then click **Save** to apply the configuration and synchronize with both nodes.
 
-   ![](assets/assets/mlscluster-creation-sync.png)
+   ![](assets/mlscluster-creation-sync.png)
 
 9. After synchronization completes, click **OK**.
 
-   ![](assets/assets/mlscluster-creation-sync-complete.png)
+   ![](assets/mlscluster-creation-sync-complete.png)
 
 10. Return to **Servers** → **Clusters** → **WebSphere application server clusters**. Locate `MLSCluster` in the list and ensure it is present. Check the box next to it, then click **Start** to initiate the cluster. Wait until the status displays a green arrow, indicating that it is running.
 
