@@ -1,6 +1,4 @@
-import time
-
-USERHOME = "/home/techzone"
+SERHOME = "/home/techzone"
 
 # Create Web Server on a Managed Node
 print "***Creating Web Server webserver1 on node2***"
