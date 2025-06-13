@@ -131,7 +131,7 @@ You can use either of the following methods to complete this task:
 
 6. On **Step 4**, review the configuration summary and click **Finish**.
 
-7. Click <u>Review</u>.
+7. Click <ins>Review</ins>.
 
    ![](assets/mlscluster-creation-review.png)
 
