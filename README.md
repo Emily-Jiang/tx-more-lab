@@ -1,14 +1,7 @@
 # IBM Modernized Runtime Extension for Java Hands-On Lab
 
-<style>
-    #tableOfContents {
-        font-size: 1.4em;
-        font-weight: bold;
-    }
-</style>
-<p>
 <details>
-<summary id="tableOfContents">Table of Contents</summary>
+<summary>Table of Contents</summary>
 
 1. [Introduction](#introduction)  
    1.1 [About this hands-on lab](#about-this-hands-on-lab)
@@ -23,8 +16,6 @@
    3.2 [Using administrative scripting](#using-administrative-scripting)  
 
 </details>
-</p>
-
 
 # Introduction
 
