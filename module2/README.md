@@ -148,7 +148,7 @@ After plug-in generation and propagation are complete, verify that the applicati
 
 This section walks you through deploying the application using the administrative console.
 
-Run the following command to deploy the application using the provided Jython  script[`deployPetClinic.py`](deployPetClinic.py):
+Run the following command to deploy the application using the provided Jython  script [`deployPetClinic.py`](deployPetClinic.py):
 
 ```sh
 /home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh \
