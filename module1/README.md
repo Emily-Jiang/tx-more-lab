@@ -85,7 +85,7 @@ This section walks you through deploying the application using the administrativ
 Run the following command to deploy the application using the provided Jython  script[`deployModResorts.py`](module1/scripts/deployModResorts.py):
 
 ```sh
-/home/techzone/IBM/WebSphere/AppServer/bin/wsadmin.sh \
+/home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh \
   -lang jython -user techzone -password IBMDem0s! \
   -f /home/techzone/Student/tx-more-lab/module1/scripts/deployModResorts.py
 ```
