@@ -144,6 +144,27 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
 After plug-in generation and propagation are complete, verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
 
+## Option 2: Using administrative scripting
+
+This section walks you through deploying the application using the administrative console.
+
+Run the following command to deploy the application using the provided Jython  script[`deployPetClinic.py`](deployPetClinic.py):
+
+```sh
+/home/techzone/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/wsadmin.sh \
+  -lang jython -user techzone -password IBMDem0s! \
+  -f /home/techzone/Student/tx-more-lab/module2/deployPetClinic.py
+```
+
+The script performs the following actions:
+
+* Installs the `spring-petclinic-3.4.0-SNAPSHOT.war` WAR file to the managed Liberty cluster `MLSCluster`
+* Maps the application to both `MLSCluster` and `webserver1`
+* Maps the application to the `default_host` virtual host
+* Generates and propagates the web server plug-in configuration
+
+After the script finishes, the message `PetClinic successfully deployed!` is displayed. Verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
+
 ## Checking out the application
 
 Because the application is accessible via IHS, use the following URLs based on the connection type:
