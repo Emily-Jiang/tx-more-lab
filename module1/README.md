@@ -1,6 +1,8 @@
 # Deploying the ModResorts application
 
-This section guides you through deploying a Jakarta EE application to the Liberty cluster managed by WebSphere Application Server using MoRE. As with earlier tasks, you can choose to use either the graphical administrative console or a scripting-based approach.
+This section guides you through deploying a Jakarta EE 10 application, running on Java 17, to a Liberty cluster managed by WebSphere Application Server using MoRE. 
+
+As with earlier tasks, you can choose to use either the graphical administrative console or a scripting-based approach.
 
 ## About the ModResorts application
 
@@ -17,7 +19,7 @@ cd modresorts
 mvn clean package
 ```
 
-The WAR file `modresorts-2.0.0.war` is created in the `target` directory and will be used for deployment to the Liberty cluster.
+The WAR file `modresorts-2.0.0.war` is created in the project's `target` directory and will be used for deployment to the Liberty cluster.
 
 ## Option 1: Using the administrative console
 
@@ -29,9 +31,9 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
 1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9443/ibm/console URL.
 
-2. Go to **Applications** &rarr; **New Application** &rarr; **New Enterprise Application**.
+2. Go to **Applications** &rarr; **New Application** &rarr; <ins>New Enterprise Application</ins>.
 
-   ![](../assets/module1-new-app.png)
+   ![](../assets/new-app.png)
 
 3. In the installation panel:
 
@@ -104,12 +106,12 @@ Because the application is accessible via IHS, use the following URLs based on t
 * **SSL (HTTPS):** https://localhost:8888/resorts _(also available in bookmarks as Mod Resorts)_
 * **Non-SSL (HTTP):** http://localhost:7777/resorts
 
-To verify proper functionality, open the application, click on the **Where to?** drop-down menu, and select a location.
+To confirm the application is functioning correctly, launch it and open the **Where to?** drop-down menu. Select any destination from the list—if successful, the relevant weather details should load and display without error messages.
 
-![alt text](../assets/modresorts.png)
+![](../assets/modresorts.png)
 
 ---
 
 # Next steps
 
-Proceed to [Module 2](module2/README.md) to deploy a Spring Boot application to the managed Liberty cluster.
+Proceed to [Module 2](module2/README.md) to deploy a Spring Boot 3.x application to the managed Liberty cluster.

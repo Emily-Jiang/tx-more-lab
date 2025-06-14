@@ -1,124 +1,155 @@
-# Spring app: petclinic 6.x
+# Deploying the Spring PetClinic application
 
-This instuction is to build the Spring Pet Clinic application to an ear file, install, and run the application on a managed Liberty server (MLS) in WebSphere Appication Server (WAS) Modernized Runtime Extension (MoRE).
+This section guides you through deploying a Spring Boot 3.x application, built on Spring Framework 6.x and running on Java 17, to a Liberty cluster managed by WebSphere Application Server using MoRE.
 
-- **Spring petclinic Github repository**: https://github.com/spring-projects/spring-petclinic
-- **Prerequisites**: Git, Maven, Java 17
+As with earlier tasks, you can choose to use either the graphical administrative console or a scripting-based approach.
 
-## Build the spring-petclinic war file
+## About the Spring PetClinic application
 
-1. Visit the [Traditional Deployment document](https://docs.spring.io/spring-boot/how-to/deployment/traditional-deployment.html) for the detail of how Spring Boot supports traditional deployment.
+The Spring PetClinic application is a sample web application built with Spring Boot 3 and Spring Framework 6, both of which require Java 17 or higher. This version of the application uses the Jakarta namespace introduced in Spring Framework 6. You can find the source code [here](https://github.com/spring-projects/spring-petclinic).
 
-2. Run the following:
-```
-git clone https://github.com/Emily-Jiang/tx-more-lab.git
-cd tx-more-lab/module2/build-war
-git clone https://github.com/spring-projects/spring-petclinic.git
-```
-3. Update the `pom.xml` file by running
-  ```
-cp updated/pom.xml spring-petclinic/pom.xml
-  ```
-  The updated pom.xml has the following changes:
-  - added the [`packaging`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L15) element after the `<version>3.4.0-SNAPSHOT</version>` line
-```
-    <version>3.4.0-SNAPSHOT</version>
-    <packaging>war</packaging>
-```
-- added the [`exec.mainClass`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/pom.xml#L41) property before the `</properties>` line as the following
-```
-    <properties>
-       ...
-       <exec.mainClass>org.springframework.samples.petclinic.PetClinicApplication</exec.mainClass>
-    </properties>
-```
+## Building the application WAR file
 
-4. Update the `PetClinicApplication.java` file by running
+To deploy the Spring PetClinic application to WebSphere Application Server using MoRE, you need to convert it from a Spring Boot JAR-based project to a WAR-based deployment.
+
+Spring Boot supports traditional WAR deployments for servlet containers like WebSphere Liberty. To learn more about traditional deployment in Spring Boot, refer to the [Spring Boot traditional deployment documentation](https://docs.spring.io/spring-boot/how-to/deployment/traditional-deployment.html).
+
+1. Clone the Spring PetClinic repository and launch it in Visual Studio Code:
+
+   ```sh
+   cd /home/techzone/Student/tx-more-lab/module2
+
+   git clone https://github.com/spring-projects/spring-petclinic.git
+   cd spring-petclinic
+
+   code .
    ```
-   cp updated/PetClinicApplication.java spring-petclinic/src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
+
+2. Update the `pom.xml` file by running the following command:
+
+   ```sh
+   cp ../updated/pom.xml pom.xml
    ```
-   The updated `PetclinicApplication.java` has the following changes:
-  - added 2 [`import`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L21-L22) statements 
-  - extended the `PetClinicApplication` class with [`SpringBootServletInitializer`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L33)
-  - added the [`configure()`](https://github.com/Emily-Jiang/tx-more-lab/blob/main/module2/build-war/updated/PetClinicApplication.java#L35-L38) statements  method as the following 
-```
-...
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-...
-public class PetClinicApplication extends SpringBootServletInitializer {
 
-       @Override
-       protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-               return application.sources(PetClinicApplication.class);
-       }
+   Key changes made in the file to support WAR deployment include:
 
-...
-```
-5. build the project
-```
-cd spring-petclinic
-mvn clean install
-```
+      * Added a [`<packaging>war</packaging>`](updated/pom.xml#L15) element after the application version declaration:
 
-The `spring-petclinic-3.4.0-SNAPSHOT.war` file is created under the `target` directory.
+        ```xml
+        <version>3.4.0-SNAPSHOT</version>
+        <packaging>war</packaging>
+        ```
 
-## Build the spring-petclinic ear file
+      * Added the [`exec.mainClass`](updated/pom.xml#L41) property under the `<properties>` section:
 
-The `pom.xml` is provided at the `build-ear` directory.
+        ```xml
+        <properties>
+            ...
+            <exec.mainClass>org.springframework.samples.petclinic.PetClinicApplication</exec.mainClass>
+        </properties>
+        ```
 
-- `cd tx-more-lab/module2/build-ear`
-- `mvn clean package`
+      You can view the full updated file [here](updated/pom.xml).
 
-The `spring-petclinic-3.4.0-SNAPSHOT.ear` file is created under the `target` directory.
+3. Update the `PetClinicApplication.java` file by running the following command:
 
-## Create a Managed Liberty server 
+   ```sh
+   cp ../updated/PetClinicApplication.java src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
+   ```
 
-Assume that the MoRE enviroment is set.
+   Key changes made in the file to support WAR deployment include:
 
-- Go to admin console, e.g. https://localhost:9043/ibm/console 
-- Go to **Servers** > **Server Types** > **WebSphere application servers**
-- At the **New...** button, select **Managed Liberty server**
-- At the Step 1, select a node to run the MLS
-  - Type in a Server name: `demoServer1`
-  - Click **Next** button
-- At the Step 2, click **Next** button
-- At the Step 3, click **Next** button
-- At the Step 4, click **Finish** button
-- Save and syncronize the changes
+   * Added the following [`import`](updated/PetClinicApplication.java#L21-L22) statements:
 
-## Install the spring-petclinic ear file
+      ```java
+      import org.springframework.boot.builder.SpringApplicationBuilder;
+      import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+      ```
+      
+   * Updated the `PetClinicApplication` class to extend [`SpringBootServletInitializer`](updated/PetClinicApplication.java#L33):
 
-Assume the spring-petclinic ear file is built at the previous step.
+      ```java
+      public class PetClinicApplication extends SpringBootServletInitializer {
+      ```
+   
+   * Added the [`configure()`](updated/PetClinicApplication.java#L35-L38) method override:
 
-- Go to admin console, e.g. https://localhost:9043/ibm/console 
-- Go to **Applications** > **New Application**
-- Click the **New Enterprise Application** link
-- Select Local file system option 
-  - Click the **Browser...** button to select the `spring-petclinic-ear-3.4.0.ear` ear file that is located at the `tx-more-lab/module2/build-ear/target` directory 
-- In **Target Runtime Environment** section, select _WebSphere Liberty_
-- Click Next button 
-- Select the **Fast Path** option, and click **Next** button 
-- At the Step 1, click **Next** button 
-- At the Step 2, make sure the `demoServer1` is selected. If not, select the `demoServer1` and check the Module, and click **Apply** button. Then, click **Next** button
-- At the Step 4, enter `/spring-petclinic` as the the context root. Then, click **Next** button.
-- At the **Summary** step, click **Finish** button 
-- Save and syncronize the changes
+      ```java
+      @Override
+      protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+          return application.sources(PetClinicApplication.class);
+      }
+      ```
 
-##  Start the managed Liberty server
-- Go to admin console, e.g. https://localhost:9043/ibm/console 
-- Go to **Servers** > **Server Types** > **WebSphere application servers**
-- Select `demoServer1`
-- Click the **Start** button 
-- Wait for a while, the server should be started when you see the green right arrow icon
+   You can view the full updated file [here](updated/PetClinicApplication.java).
 
-## Check out the application
+4. Run the following command to build the application WAR file:
 
-- Check out the messages.log by running the following command:
-  - `cat AppServer/profiles/AppSrv01/managedLiberty/usr/servers/demoServer5/logs/messages.log | grep CWWKT0016I`
-  - You will see an output similar to the following:
-```
-[2025-05-27, 11:47:29:181 EDT] 00000032 com.ibm.ws.http.internal.VirtualHostImpl
-A CWWKT0016I: Web application available (default_host): http://9.46.93.127:9084/spring-petclinic/
-```
-- Visit the URL
+   ```sh
+   mvn clean package
+   ```
+
+   The WAR file `spring-petclinic-3.4.0-SNAPSHOT.war` is created in the project's `target` directory and will be used for deployment to the Liberty cluster.
+
+## Option 1: Using the administrative console
+
+This section walks you through deploying the application using the administrative console.
+
+If you prefer to use a script, skip ahead to [Option 2: Using administrative scripting](#option-2-using-administrative-scripting).
+
+### Installing the application WAR file
+
+1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9443/ibm/console URL.
+
+2. Go to **Applications** &rarr; **New Application** &rarr; <ins>New Enterprise Application</ins>.
+
+3. In the installation panel:
+
+   * Under **Path to new application**, select **Local file system** and choose the WAR file located at `/home/techzone/Student/tx-more-lab/module2/spring-petclinic/target/spring-petclinic-3.4.0-SNAPSHOT.war`
+   * Set **Target Runtime Environment** to `WebSphere Liberty`
+   
+   Click **Next** and wait for the application to upload.
+
+4. Choose **Fast Path** and click **Next**.
+
+5. Leave **Step 1** unchanged and click **Next**.
+
+6. On **Step 2**, map the application module:
+
+   * Under **Cluster and servers**, select both `MLSCluster` and `webserver1` by holding **Shift** or dragging between options.
+
+   * Check the box next to `spring-petclinic-3.4.0-SNAPSHOT.war` and click **Apply**.
+
+   * Confirm that both `MLSCluster` and `webserver1` are now listed under the **Server** column for the `spring-petclinic-3.4.0-SNAPSHOT.war` module.
+   
+   Click **Next**.
+
+7. On **Step 3**, choose `default_host` as the **Virtual host** for the `spring-petclinic-3.4.0-SNAPSHOT.war` module.
+
+8. On **Step 4**, enter `/spring-petclinic` as the **Context Root**, then click **Next** to continue.
+
+9. On **Step 5**, review the installation summary and click **Finish**.
+
+10. After the installation completes, click <ins>Review</ins>. 
+   
+   Select **Synchronize changes with Nodes**, and click **Save**. Click **OK** when synchronization is complete.
+
+### Generating and propagating the web server plug-in
+
+1. Go to **Servers** &rarr; **Server Types** &rarr; **Web servers**.
+
+2. Select `webserver1` and click **Generate Plug-in**.
+
+3. Select `webserver1` again and click **Propagate Plug-in**.
+
+After plug-in generation and propagation are complete, verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
+
+## Checking out the application
+
+Because the application is accessible via IHS, use the following URLs based on the connection type:
+* **SSL (HTTPS):** https://localhost:8888/spring-petclinic _(also available in bookmarks as PetClinic)_
+* **Non-SSL (HTTP):** http://localhost:7777/spring-petclinic
+
+To confirm the application is functioning correctly, launch it and navigate to the **FIND OWNERS** tab in the top menu bar. Click **Find Owner** without entering the search field. If successful, a list of existing owners should appear without any error messages.
+
+![](../assets/spring-petclinic.png)
