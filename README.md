@@ -88,10 +88,10 @@ After the script completes, the message `All servers have been started!` is disp
 This section guides you through the process of creating a static managed Liberty server cluster.
 
 You can use either of the following methods to complete this task:
-* If you prefer a visual, step-by-step experience, continue with [Using the administrative console](#using-the-administrative-console).
-* If you prefer automation or scripting, skip ahead to [Using administrative scripting](#using-administrative-scripting).
+* If you prefer a visual, step-by-step experience, continue with [Option 1: Using the administrative console](#option-1-using-the-administrative-console).
+* If you prefer automation or scripting, skip ahead to [Using administrative scripting](#option-2-using-administrative-scripting).
 
-## Using the administrative console
+## Option 1: Using the administrative console
 
 1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9443/ibm/console URL.
 
@@ -134,11 +134,11 @@ You can use either of the following methods to complete this task:
 
    ![](assets/mlscluster-creation-sync-complete.png)
 
-10. Return to **Servers** → **Clusters** → **WebSphere application server clusters**. Locate <ins>MLSCluster</ins> in the list and ensure it is present. Check the box next to it, then click **Start** to initiate the cluster. Wait until the status displays a green arrow, indicating that it is running.
+10. Return to **Servers** &rarr; **Clusters** &rarr; **WebSphere application server clusters**. Locate <ins>MLSCluster</ins> in the list and ensure it is present. Check the box next to it, then click **Start** to initiate the cluster. Wait until the status displays a green arrow, indicating that it is running.
 
     ![](assets/mlscluster-start.png)
 
-## Using administrative scripting
+## Option 2: Using administrative scripting
 
 Run the following command to create and start the cluster using the provided Jython script [`createMLSCluster.py`](scripts/createMLSCluster.py):
 
@@ -159,6 +159,6 @@ When the cluster starts successfully, the message `!!!Successfully started the c
 
 ---
 
-# Next Steps
+# Next steps
 
 Proceed to [Module 1](module1/README.md) to deploy a Java 17 and Jakarta EE 10 application to the managed Liberty cluster.
