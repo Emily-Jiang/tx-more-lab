@@ -114,4 +114,4 @@ To confirm the application is functioning correctly, launch it and open the **Wh
 
 # Next steps
 
-Proceed to [Module 2](module2/README.md) to deploy a Spring Boot 3.x application to the managed Liberty cluster.
+Proceed to [Module 2](../module2/README.md) to deploy a Spring Boot 3.x application to the managed Liberty cluster.
