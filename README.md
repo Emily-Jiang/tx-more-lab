@@ -94,7 +94,7 @@ This section guides you through the process of creating a static managed Liberty
 
 You can use either of the following methods to complete this task:
 * If you prefer a visual, step-by-step experience, continue with [Option 1: Using the administrative console](#option-1-using-the-administrative-console).
-* If you prefer automation or scripting, skip ahead to [Using administrative scripting](#option-2-using-administrative-scripting).
+* If you prefer automation or scripting, skip ahead to [Option 2: Using administrative scripting](#option-2-using-administrative-scripting).
 
 ## Option 1: Using the administrative console
 
