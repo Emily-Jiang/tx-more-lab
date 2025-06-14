@@ -28,4 +28,6 @@ AdminControl.invoke(
     [DMGRCONFIGPATH, "MoREDemoCell", "node2", "webserver1"]
 )
 
-print "ModResorts deployed. Visit: http://<hostname>:7777/resorts"
+print("ModResorts successfully deployed! Access the application at:")
+print("- Non-SSL: http://localhost:7777/resorts")
+print("- SSL: https://localhost:8888/resorts")
