@@ -26,11 +26,7 @@
 
 # Introduction
 
-[IBM Modernized Runtime Extension for Java (MoRE)](https://www.ibm.com/docs/en/more) is a powerful capability of WebSphere® Application Server Network Deployment (ND) 9.0.5 that enables users to run and manage WebSphere Application Server Liberty workloads using the familiar tools of traditional WebSphere, such as the administrative console, wsadmin scripting, and JMX clients.
-
-MoRE allows you to create managed Liberty servers that integrate into an existing WebSphere ND cell. These servers support modern Java runtimes—Java SE 17 for Liberty and Java SE 8 for ND nodes—and are compatible with a subset of Jakarta EE 10 specifications supported by WebSphere Liberty. This setup provides a hybrid environment for running both traditional Java EE 7 and Jakarta EE 10 applications, enabling incremental modernization without disrupting existing infrastructure or operations.
-
-Through MoRE, you can manage the full lifecycle of Liberty servers, including clustering, plugin generation, security configurations, and deployment, all from your usual WebSphere ND interfaces.
+[IBM Modernized Runtime Extension for Java](https://www.ibm.com/docs/en/more) (MoRE) is an extension of WebSphere® Application Server Network Deployment (ND) 9.0.5 that enables you to run and manage Liberty servers from the traditional WebSphere environment. With MoRE, Liberty servers can be configured, clustered, and administered using familiar tools like the administrative console and wsadmin scripting.
 
 ## About this hands-on lab
 
