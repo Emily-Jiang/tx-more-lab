@@ -1,4 +1,4 @@
-# Deploying the ModResorts application
+# Deploying a Jakarta EE 10 application
 
 This section guides you through deploying a Jakarta EE 10 application, running on Java 17, to a Liberty cluster managed by WebSphere Application Server using MoRE. 
 
@@ -6,7 +6,7 @@ As with earlier tasks, you can choose to use either the graphical administrative
 
 ## About the ModResorts application
 
-The ModResorts application was originally deployed on WebSphere Application Server 9. It has since been migrated to Liberty, upgraded from Java 8 to Java 17, and now uses technologies from the Jakarta EE 10 Core Profile. You can find the source code [here](https://github.com/IBM/sample-app-mod).
+In this module, you’ll work with the ModResorts application, a sample web application originally developed for IBM WebSphere Application Server 9. It has since been migrated to Liberty, upgraded from Java 8 to Java 17, and updated to use technologies from the Jakarta EE 10 Core Profile. You can find the source code [here](https://github.com/IBM/sample-app-mod).
 
 ## Building the application WAR file
 
