@@ -15,9 +15,9 @@
    3.1 [Option 1: Using the administrative console](#option-1-using-the-administrative-console)  
    3.2 [Option 2: Using administrative scripting](#option-2-using-administrative-scripting)  
 
-4. [Module 1: Deploying the ModResorts application](module1/README.md)
+4. [Module 1: Deploying a Jakarta EE 10 application](module1/README.md)
 
-5. [Module 2: Deploying the Spring PetClinic application](module2/README.md)
+5. [Module 2: Deploying a Spring Boot 3 application](module2/README.md)
 
 6. [Troubleshooting](#troubleshooting)  
    6.1 [Resetting the lab environment](#resetting-the-lab-environment)
