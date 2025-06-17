@@ -89,7 +89,7 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
    mvn clean package
    ```
 
-   The WAR file `spring-petclinic-3.4.0-SNAPSHOT.war` is created in the project's `target` directory and will be used for deployment to the Liberty cluster.
+   The WAR file `spring-petclinic-3.5.0-SNAPSHOT.war` is created in the project's `target` directory and will be used for deployment to the Liberty cluster.
 
 ## Option 1: Using the administrative console
 
@@ -105,7 +105,7 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
 3. In the installation panel:
 
-   * Under **Path to new application**, select **Local file system** and choose the WAR file located at `/home/techzone/Student/tx-more-lab/module2/spring-petclinic/target/spring-petclinic-3.4.0-SNAPSHOT.war`
+   * Under **Path to new application**, select **Local file system** and choose the WAR file located at `/home/techzone/Student/tx-more-lab/module2/spring-petclinic/target/spring-petclinic-3.5.0-SNAPSHOT.war`
    * Set **Target Runtime Environment** to `WebSphere Liberty`
    
    Click **Next** and wait for the application to upload.
@@ -118,13 +118,13 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
    * Under **Cluster and servers**, select both `MLSCluster` and `webserver1` by holding **Shift** or dragging between options.
 
-   * Check the box next to `spring-petclinic-3.4.0-SNAPSHOT.war` and click **Apply**.
+   * Check the box next to `spring-petclinic-3.5.0-SNAPSHOT.war` and click **Apply**.
 
-   * Confirm that both `MLSCluster` and `webserver1` are now listed under the **Server** column for the `spring-petclinic-3.4.0-SNAPSHOT.war` module.
+   * Confirm that both `MLSCluster` and `webserver1` are now listed under the **Server** column for the `spring-petclinic-3.5.0-SNAPSHOT.war` module.
    
    Click **Next**.
 
-7. On **Step 3**, choose `default_host` as the **Virtual host** for the `spring-petclinic-3.4.0-SNAPSHOT.war` module.
+7. On **Step 3**, choose `default_host` as the **Virtual host** for the `spring-petclinic-3.5.0-SNAPSHOT.war` module.
 
 8. On **Step 4**, enter `/spring-petclinic` as the **Context Root**, then click **Next** to continue.
 
@@ -158,7 +158,7 @@ Run the following command to deploy the application using the provided Jython  s
 
 The script performs the following actions:
 
-* Installs the `spring-petclinic-3.4.0-SNAPSHOT.war` WAR file to the managed Liberty cluster `MLSCluster`
+* Installs the `spring-petclinic-3.5.0-SNAPSHOT.war` WAR file to the managed Liberty cluster `MLSCluster`
 * Maps the application to both `MLSCluster` and `webserver1`
 * Maps the application to the `default_host` virtual host
 * Generates and propagates the web server plug-in configuration
