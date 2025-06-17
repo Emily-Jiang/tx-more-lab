@@ -63,7 +63,7 @@ All components are installed under `/home/techzone/IBM` on the student virtual m
 
 ## Cloning the lab repository
 
-Clone the lab repository to your environment:
+Open a command-line terminal and run the following commands to clone the lab repository to your environment:
 
 ```sh
 cd /home/techzone/Student
@@ -94,7 +94,7 @@ You can use either of the following methods to complete this task:
 
 ## Option 1: Using the administrative console
 
-1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9443/ibm/console URL.
+1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9043/ibm/console URL.
 
    Log in using the following credentials:
    * User ID: `techzone`
