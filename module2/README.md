@@ -6,7 +6,7 @@ As with earlier tasks, you can choose to use either the graphical administrative
 
 ## About the Spring PetClinic application
 
-In this module, you’ll work with the Spring PetClinic application, a sample web application built with Spring Boot 3 and Spring Framework 6, both of which require Java 17 or higher. This version of the application uses the Jakarta namespace introduced in Spring Framework 6. You can find the source code [here](https://github.com/spring-projects/spring-petclinic).
+In this module, you’ll work with the Spring PetClinic application, a sample web application built with Spring Boot 3 and Spring Framework 6, both of which require Java 17 or higher. This version of the application uses the Jakarta EE 10 technologies introduced in Spring Framework 6. You can find the source code [here](https://github.com/spring-projects/spring-petclinic).
 
 ## Building the application WAR file
 
