@@ -29,7 +29,7 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
 ### Installing the application WAR file
 
-1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9443/ibm/console URL.
+1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9043/ibm/console URL.
 
 2. Go to **Applications** &rarr; **New Application** &rarr; <ins>New Enterprise Application</ins>.
 
