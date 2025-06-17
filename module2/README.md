@@ -36,7 +36,7 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
       * Added a [`<packaging>war</packaging>`](updated/pom.xml#L15) element after the application version declaration:
 
         ```xml
-        <version>3.4.0-SNAPSHOT</version>
+        <version>3.5.0-SNAPSHOT</version>
         <packaging>war</packaging>
         ```
 
