@@ -168,8 +168,8 @@ After the script finishes, the message `PetClinic successfully deployed!` is dis
 ## Checking out the application
 
 Because the application is accessible via IHS, use the following URLs based on the connection type:
-* **SSL (HTTPS):** https://localhost:8888/spring-petclinic _(also available in bookmarks as PetClinic)_
-* **Non-SSL (HTTP):** http://localhost:7777/spring-petclinic
+* **SSL (HTTPS):** https://localhost:8888/spring-petclinic/ _(also available in bookmarks as PetClinic)_
+* **Non-SSL (HTTP):** http://localhost:7777/spring-petclinic/
 
 To confirm the application is functioning correctly, launch it and navigate to the **FIND OWNERS** tab in the top menu bar. Click **Find Owner** without entering the search field. If successful, a list of existing owners should appear without any error messages.
 
