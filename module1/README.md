@@ -98,7 +98,7 @@ The script performs the following actions:
 * Maps the application to both `MLSCluster` and `webserver1`
 * Generates and propagates the web server plug-in configuration
 
-After the script finishes, the message `ModResorts successfully deployed!` is displayed. Verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
+After the script finishes, the message `ModResorts successfully deployed!` is displayed. Wait for a while to let the application to start. Verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
 
 ## Checking out the application
 
