@@ -25,7 +25,7 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
    code .
    ```
 
-2. Update the `pom.xml` file by running the following command:
+2. To make the Maven project to build `war` file, update the `pom.xml` file by running the following command:
 
    ```sh
    cp ../updated/pom.xml pom.xml
@@ -51,13 +51,13 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
 
       You can view the full updated file [here](updated/pom.xml).
 
-3. Update the `PetClinicApplication.java` file by running the following command:
+3. To make the application to run in web container, update the `PetClinicApplication.java` file by running the following command:
 
    ```sh
    cp ../updated/PetClinicApplication.java src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
    ```
 
-   Key changes made in the file to support WAR deployment include:
+   Key changes made in the file include:
 
    * Added the following [`import`](updated/PetClinicApplication.java#L21-L22) statements:
 
