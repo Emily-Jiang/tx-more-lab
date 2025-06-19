@@ -29,7 +29,7 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
 ### Installing the application WAR file
 
-1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9443/ibm/console URL.
+1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9043/ibm/console URL.
 
 2. Go to **Applications** &rarr; **New Application** &rarr; <ins>New Enterprise Application</ins>.
 
@@ -98,7 +98,7 @@ The script performs the following actions:
 * Maps the application to both `MLSCluster` and `webserver1`
 * Generates and propagates the web server plug-in configuration
 
-After the script finishes, the message `ModResorts successfully deployed!` is displayed. Verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
+After the script finishes, the message `ModResorts successfully deployed!` is displayed. Wait for a while to let the application to start. Verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
 
 ## Checking out the application
 

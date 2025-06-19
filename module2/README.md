@@ -25,7 +25,7 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
    code .
    ```
 
-2. Update the `pom.xml` file by running the following command:
+2. To make the Maven project to build `war` file, update the `pom.xml` file by running the following command:
 
    ```sh
    cp ../updated/pom.xml pom.xml
@@ -36,7 +36,7 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
       * Added a [`<packaging>war</packaging>`](updated/pom.xml#L15) element after the application version declaration:
 
         ```xml
-        <version>3.4.0-SNAPSHOT</version>
+        <version>3.5.0-SNAPSHOT</version>
         <packaging>war</packaging>
         ```
 
@@ -51,13 +51,13 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
 
       You can view the full updated file [here](updated/pom.xml).
 
-3. Update the `PetClinicApplication.java` file by running the following command:
+3. To make the application to run in web container, update the `PetClinicApplication.java` file by running the following command:
 
    ```sh
    cp ../updated/PetClinicApplication.java src/main/java/org/springframework/samples/petclinic/PetClinicApplication.java
    ```
 
-   Key changes made in the file to support WAR deployment include:
+   Key changes made in the file include:
 
    * Added the following [`import`](updated/PetClinicApplication.java#L21-L22) statements:
 
@@ -89,7 +89,7 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
    mvn clean package
    ```
 
-   The WAR file `spring-petclinic-3.4.0-SNAPSHOT.war` is created in the project's `target` directory and will be used for deployment to the Liberty cluster.
+   The WAR file `spring-petclinic-3.5.0-SNAPSHOT.war` is created in the project's `target` directory and will be used for deployment to the Liberty cluster.
 
 ## Option 1: Using the administrative console
 
@@ -99,13 +99,13 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
 ### Installing the application WAR file
 
-1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9443/ibm/console URL.
+1. Launch the **WAS Admin Console** by selecting it from your browser bookmarks or navigating to the https://localhost:9043/ibm/console URL.
 
 2. Go to **Applications** &rarr; **New Application** &rarr; <ins>New Enterprise Application</ins>.
 
 3. In the installation panel:
 
-   * Under **Path to new application**, select **Local file system** and choose the WAR file located at `/home/techzone/Student/tx-more-lab/module2/spring-petclinic/target/spring-petclinic-3.4.0-SNAPSHOT.war`
+   * Under **Path to new application**, select **Local file system** and choose the WAR file located at `/home/techzone/Student/tx-more-lab/module2/spring-petclinic/target/spring-petclinic-3.5.0-SNAPSHOT.war`
    * Set **Target Runtime Environment** to `WebSphere Liberty`
    
    Click **Next** and wait for the application to upload.
@@ -118,13 +118,13 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
 
    * Under **Cluster and servers**, select both `MLSCluster` and `webserver1` by holding **Shift** or dragging between options.
 
-   * Check the box next to `spring-petclinic-3.4.0-SNAPSHOT.war` and click **Apply**.
+   * Check the box next to `spring-petclinic-3.5.0-SNAPSHOT.war` and click **Apply**.
 
-   * Confirm that both `MLSCluster` and `webserver1` are now listed under the **Server** column for the `spring-petclinic-3.4.0-SNAPSHOT.war` module.
+   * Confirm that both `MLSCluster` and `webserver1` are now listed under the **Server** column for the `spring-petclinic-3.5.0-SNAPSHOT.war` module.
    
    Click **Next**.
 
-7. On **Step 3**, choose `default_host` as the **Virtual host** for the `spring-petclinic-3.4.0-SNAPSHOT.war` module.
+7. On **Step 3**, choose `default_host` as the **Virtual host** for the `spring-petclinic-3.5.0-SNAPSHOT.war` module.
 
 8. On **Step 4**, enter `/spring-petclinic` as the **Context Root**, then click **Next** to continue.
 
@@ -158,18 +158,18 @@ Run the following command to deploy the application using the provided Jython  s
 
 The script performs the following actions:
 
-* Installs the `spring-petclinic-3.4.0-SNAPSHOT.war` WAR file to the managed Liberty cluster `MLSCluster`
+* Installs the `spring-petclinic-3.5.0-SNAPSHOT.war` WAR file to the managed Liberty cluster `MLSCluster`
 * Maps the application to both `MLSCluster` and `webserver1`
 * Maps the application to the `default_host` virtual host
 * Generates and propagates the web server plug-in configuration
 
-After the script finishes, the message `PetClinic successfully deployed!` is displayed. Verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
+After the script finishes, the message `PetClinic successfully deployed!` is displayed. Wait for a while to let the application to start. Verify that the application is running by following the steps in [Checking out the application](#checking-out-the-application).
 
 ## Checking out the application
 
 Because the application is accessible via IHS, use the following URLs based on the connection type:
-* **SSL (HTTPS):** https://localhost:8888/spring-petclinic _(also available in bookmarks as PetClinic)_
-* **Non-SSL (HTTP):** http://localhost:7777/spring-petclinic
+* **SSL (HTTPS):** https://localhost:8888/spring-petclinic/ _(also available in bookmarks as PetClinic)_
+* **Non-SSL (HTTP):** http://localhost:7777/spring-petclinic/
 
 To confirm the application is functioning correctly, launch it and navigate to the **FIND OWNERS** tab in the top menu bar. Click **Find Owner** without entering the search field. If successful, a list of existing owners should appear without any error messages.
 

@@ -5,12 +5,12 @@ DMGRCONFIGPATH = USERHOME + "/IBM/WebSphere/AppServer/profiles/Dmgr01/config"
 # Install Application PetClinic
 print "***Now installing Application PetClinic***"
 AdminApp.install(
-    DEMOPATH + "/module2/spring-petclinic/target/spring-petclinic-3.4.0-SNAPSHOT.war",
+    DEMOPATH + "/module2/spring-petclinic/target/spring-petclinic-3.5.0-SNAPSHOT.war",
     "[ -distributeApp -useMetaDataFromBinary -appname spring-petclinic-3_4_0-SNAPSHOT_war -validateinstall warn "
     "-noallowDispatchRemoteInclude -noallowServiceRemoteInclude -novalidateSchema -contextroot /spring-petclinic "
-    "-MapModulesToServers [[ spring-petclinic-3.4.0-SNAPSHOT.war spring-petclinic-3.4.0-SNAPSHOT.war,WEB-INF/web.xml "
+    "-MapModulesToServers [[ spring-petclinic-3.5.0-SNAPSHOT.war spring-petclinic-3.5.0-SNAPSHOT.war,WEB-INF/web.xml "
     "WebSphere:cell=MoREDemoCell,cluster=MLSCluster+WebSphere:cell=MoREDemoCell,node=node2,server=webserver1 ]] "
-    "-MapWebModToVH [[ spring-petclinic-3.4.0-SNAPSHOT.war spring-petclinic-3.4.0-SNAPSHOT.war,WEB-INF/web.xml default_host ]]"
+    "-MapWebModToVH [[ spring-petclinic-3.5.0-SNAPSHOT.war spring-petclinic-3.5.0-SNAPSHOT.war,WEB-INF/web.xml default_host ]]"
 )
 AdminConfig.save()
 
