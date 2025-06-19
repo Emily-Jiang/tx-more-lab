@@ -1,6 +1,6 @@
-# Deploying a Spring Boot 3 application
+# Deploying a Spring Framework 6.x application
 
-This section guides you through deploying a Spring Boot 3.x application, built on Spring Framework 6.x and running on Java 17, to a Liberty cluster managed by WebSphere Application Server using MoRE.
+This section guides you through deploying a Spring Framework 6.x application, built on Spring Framework 6.x and running on Java 17, to a Liberty cluster managed by WebSphere Application Server using MoRE.
 
 As with earlier tasks, you can choose to use either the graphical administrative console or a scripting-based approach.
 
