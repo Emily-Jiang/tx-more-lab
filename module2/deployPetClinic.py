@@ -30,5 +30,5 @@ AdminControl.invoke(
 )
 
 print("PetClinic successfully deployed! Access the application at:")
-print("- Non-SSL: http://localhost:7777/spring-petclinic")
-print("- SSL: https://localhost:8888/spring-petclinic")
+print("- SSL: https://localhost:8888/spring-petclinic/")
+print("- Non-SSL: http://localhost:7777/spring-petclinic/")
