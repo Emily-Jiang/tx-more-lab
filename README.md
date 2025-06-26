@@ -17,7 +17,7 @@
 
 4. [Module 1: Deploying a Jakarta EE 10 application](module1/README.md)
 
-5. [Module 2: Deploying a Spring Boot 3 application](module2/README.md)
+5. [Module 2: Deploying a Spring Framework 6.x application](module2/README.md)
 
 6. [Troubleshooting](#troubleshooting)  
    6.1 [Resetting the lab environment](#resetting-the-lab-environment)
