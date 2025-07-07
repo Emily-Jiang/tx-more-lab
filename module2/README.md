@@ -14,15 +14,13 @@ To deploy the Spring PetClinic application to WebSphere Application Server using
 
 Spring Boot supports traditional WAR deployments for servlet containers like WebSphere Liberty. To learn more about traditional deployment in Spring Boot, refer to the [Spring Boot traditional deployment documentation](https://docs.spring.io/spring-boot/how-to/deployment/traditional-deployment.html).
 
-1. Clone the Spring PetClinic repository and launch it in Visual Studio Code:
+1. Clone the Spring PetClinic repository:
 
    ```sh
    cd /home/techzone/Student/tx-more-lab/module2
 
    git clone https://github.com/spring-projects/spring-petclinic.git
    cd spring-petclinic
-
-   code .
    ```
 
 2. To make the Maven project to build `war` file, update the `pom.xml` file by running the following command:
@@ -40,7 +38,7 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
         <packaging>war</packaging>
         ```
 
-      * Added the [`exec.mainClass`](updated/pom.xml#L41) property under the `<properties>` section:
+      * Added the [`exec.mainClass`](updated/pom.xml#L40) property under the `<properties>` section:
 
         ```xml
         <properties>
@@ -66,13 +64,13 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
       import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
       ```
       
-   * Updated the `PetClinicApplication` class to extend [`SpringBootServletInitializer`](updated/PetClinicApplication.java#L33):
+   * Updated the `PetClinicApplication` class to extend [`SpringBootServletInitializer`](updated/PetClinicApplication.java#L32):
 
       ```java
       public class PetClinicApplication extends SpringBootServletInitializer {
       ```
    
-   * Added the [`configure()`](updated/PetClinicApplication.java#L35-L38) method override:
+   * Added the [`configure()`](updated/PetClinicApplication.java#L34-L37) method override:
 
       ```java
       @Override
@@ -124,7 +122,7 @@ If you prefer to use a script, skip ahead to [Option 2: Using administrative scr
    
    Click **Next**.
 
-7. On **Step 3**, choose `default_host` as the **Virtual host** for the `spring-petclinic-3.5.0-SNAPSHOT.war` module.
+7. On **Step 3**, choose `default_host` as the **Virtual host** for the `spring-petclinic-3.5.0-SNAPSHOT.war` module, then click **Next** to continue.
 
 8. On **Step 4**, enter `/spring-petclinic` as the **Context Root**, then click **Next** to continue.
 
