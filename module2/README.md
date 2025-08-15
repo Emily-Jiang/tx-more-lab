@@ -89,6 +89,9 @@ Spring Boot supports traditional WAR deployments for servlet containers like Web
 
    The WAR file `spring-petclinic-3.5.0-SNAPSHOT.war` is created in the project's `target` directory and will be used for deployment to the Liberty cluster.
 
+   > [!NOTE]
+   > The generated .war would have the timestamp of `Nov 2024` as it was the timestamp set by the petclinic [here](https://github.com/spring-projects/spring-petclinic/blob/main/pom.xml#L25) for the reproducible build purpose.
+
 ## Option 1: Using the administrative console
 
 This section walks you through deploying the application using the administrative console.
