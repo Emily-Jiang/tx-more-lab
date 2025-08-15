@@ -139,8 +139,9 @@ You can use either of the following methods to complete this task:
 
     ![](assets/mlscluster-start.png)
 
->[!NOTE]
->After some wait, if the cluster does not show as started, you might want to check the servers status via **Servers** &rarr; **All Servers** &rarr; and then the cluster servers. If the servers are started, you are ready to go.
+> [!NOTE]
+> After some wait, if the cluster does not show as started, you might want to check the servers status via **Servers** &rarr;  **All Servers** &rarr; and then the cluster servers. If the  servers are started, you are ready to go.
+
 ## Option 2: Using administrative scripting
 
 Run the following command to create and start the cluster using the provided Jython script [`createMLSCluster.py`](scripts/createMLSCluster.py):
